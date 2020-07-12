@@ -1,4 +1,5 @@
 ﻿using System;
+using FacadePattern.Services;
 
 namespace FacadePattern
 {
@@ -6,7 +7,17 @@ namespace FacadePattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            BigClass bigClass = new BigClass();
+            
+            bigClass.SetValueI(3);
+            
+            bigClass.IncrementI();
+            bigClass.IncrementI();
+            bigClass.IncrementI();
+            
+            bigClass.DecrememntI();
+            
+            Console.WriteLine($"Final Number : {bigClass.GetValueA()}");
         }
     }
 }
