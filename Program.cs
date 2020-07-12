@@ -7,17 +7,12 @@ namespace FacadePattern
     {
         static void Main(string[] args)
         {
-            BigClass bigClass = new BigClass();
+            BigClassFacade bigClass = new BigClassFacade();
             
-            bigClass.SetValueI(3);
+            bigClass.IncreaseBy(50);
+            bigClass.DecreaseBy(20);
             
-            bigClass.IncrementI();
-            bigClass.IncrementI();
-            bigClass.IncrementI();
-            
-            bigClass.DecrememntI();
-            
-            Console.WriteLine($"Final Number : {bigClass.GetValueA()}");
+            Console.WriteLine($"Final Number : {bigClass.GetCurrentValue()}");
         }
     }
 }
